@@ -18,7 +18,8 @@ h1,h2,h3,h4 {
 }
 body {
     // height: 100vh;
-    background-image: url(../assets/img/background_planets.jpeg);
+    background-attachment: fixed;
+    background-image: url(../assets/img/background_planets1.png);
     background-position: top;
     background-size: cover;
 }
@@ -34,7 +35,6 @@ a {
 }
 .actual {
     color: #1756F3;
-    border-bottom: 1px solid #1756F3;
 }
 // Estilos del Header
 .header {
@@ -70,6 +70,7 @@ a {
     margin-top: 7rem;
     display: grid;
     grid-template-columns: 3fr 2fr;
+    gap: 1.2rem;
     padding: 2rem;
 }
 .informacion-principal_texto {
@@ -91,6 +92,14 @@ a {
     }
     a:hover {
         color: rgba($color: #F32E17, $alpha: 0.8);
+    }
+}
+.textos {
+    p {
+        display: none;
+    }
+    .texto-actual {
+        display: block;
     }
 }
 
@@ -129,13 +138,13 @@ a {
         font-size: 2rem;
         cursor: pointer;
         &:hover {
-            background-color: rgba($color: #8700FF, $alpha: 0.1);
+            background-color: rgba($color: #5C00AE, $alpha: 0.1);
         }
     }
     .item_actual {
-        background-color: #8700FF;
+        background-color: #5C00AE;
         &:hover {
-            background-color: #8700FF;
+            background-color: #5C00AE;
         }
     }
 }

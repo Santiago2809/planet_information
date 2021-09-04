@@ -21,7 +21,8 @@ h1, h2, h3, h4 {
 }
 
 body {
-  background-image: url(../assets/img/background_planets.jpeg);
+  background-attachment: fixed;
+  background-image: url(../assets/img/background_planets1.png);
   background-position: top;
   background-size: cover;
 }
@@ -38,7 +39,6 @@ a {
 
 .actual {
   color: #1756F3;
-  border-bottom: 1px solid #1756F3;
 }
 
 .header {
@@ -89,6 +89,7 @@ a {
   display: grid;
   -ms-grid-columns: 3fr 2fr;
       grid-template-columns: 3fr 2fr;
+  gap: 1.2rem;
   padding: 2rem;
 }
 
@@ -113,6 +114,14 @@ a {
 
 .informacion-principal_texto a:hover {
   color: rgba(243, 46, 23, 0.8);
+}
+
+.textos p {
+  display: none;
+}
+
+.textos .texto-actual {
+  display: block;
 }
 
 .contenido_secundario {
@@ -161,14 +170,14 @@ a {
 }
 
 .lista_informacion li:hover {
-  background-color: rgba(135, 0, 255, 0.1);
+  background-color: rgba(92, 0, 174, 0.1);
 }
 
 .lista_informacion .item_actual {
-  background-color: #8700FF;
+  background-color: #5C00AE;
 }
 
 .lista_informacion .item_actual:hover {
-  background-color: #8700FF;
+  background-color: #5C00AE;
 }
 /*# sourceMappingURL=app.css.map */
