@@ -38,7 +38,7 @@ a {
 }
 
 .actual {
-  color: #1756F3;
+  color: #5C00AE;
 }
 
 .header {
@@ -62,7 +62,7 @@ a {
 }
 
 .header a:hover {
-  color: rgba(243, 46, 23, 0.8);
+  color: rgba(92, 0, 174, 0.8);
 }
 
 .nav {
@@ -93,6 +93,10 @@ a {
   padding: 2rem;
 }
 
+.informacion-principal_texto {
+  min-height: 30rem;
+}
+
 .informacion-principal_texto h2 {
   font-size: 5rem;
 }
@@ -118,6 +122,8 @@ a {
 
 .textos p {
   display: none;
+  -webkit-transition: display 1s ease-out;
+  transition: display 1s ease-out;
 }
 
 .textos .texto-actual {

@@ -34,7 +34,7 @@ a {
     margin: 0 auto;
 }
 .actual {
-    color: #1756F3;
+    color: #5C00AE;
 }
 // Estilos del Header
 .header {
@@ -49,7 +49,7 @@ a {
         font-size: 1.5rem;
     }
     a:hover {
-        color: rgba($color: #F32E17, $alpha: 0.8);
+        color: rgba($color: #5C00AE, $alpha: 0.8);
     }
     border-bottom: 0.5px solid rgba(227, 227, 227, 0.25);
 
@@ -74,6 +74,7 @@ a {
     padding: 2rem;
 }
 .informacion-principal_texto {
+    min-height: 30rem;
     h2 {
         font-size: 5rem;
     }
@@ -97,9 +98,11 @@ a {
 .textos {
     p {
         display: none;
+        transition: display 1s ease-out;
     }
     .texto-actual {
         display: block;
+        
     }
 }
 
