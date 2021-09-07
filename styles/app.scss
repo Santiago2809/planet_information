@@ -22,6 +22,8 @@ body {
     background-image: url(../assets/img/background_planets1.png);
     background-position: top;
     background-size: cover;
+    position: relative;
+    background-color: #061221;
 }
 
 
@@ -40,6 +42,7 @@ a {
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1.8rem;
     h1 {
         font-weight: bold;
@@ -54,25 +57,110 @@ a {
     border-bottom: 0.5px solid rgba(227, 227, 227, 0.25);
 
 }
+.menu_hamburguesa {
+    width: 4rem;
+}
 .nav {
-    display: flex;
+    display: none;
+    grid-template-rows: repeat(8,1fr);
+    position: absolute;
+    right: 2rem;
+    padding-right: 3rem;
     justify-content: space-around;
     gap: 1.5rem;
+    background-color: #061221;
+    padding: 0.5rem;
+    border-radius: 5px;
     a {
         font-size: 1.8rem;
+        width: 10rem;
+        text-align: center;
     }
+    transition: display 1500ms linear;
 }
 .svg {
-    width: 40rem;
+    width: 30rem;
     margin: 0 auto;
 }
 .contenido_principal {
     margin-top: 7rem;
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 35rem 1fr ;
     gap: 1.2rem;
     padding: 2rem;
 }
+
+.contenido_secundario {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    .cuadro {
+        padding: 1rem;
+        border: 1px solid rgba(227, 227, 227, 0.25);
+        width: 100%;
+        h3 {
+            font-size: 1.4rem;
+            color: rgba(227, 227, 227, 0.8);
+        }
+        h2 {
+            font-size: 3rem;
+            margin: 1.5rem 0;
+            font-weight: normal;
+        }
+    }
+}
+
+@media (min-width : 550px ) {
+    .menu_hamburguesa {
+        display: none;
+    }
+    .nav {
+        display: flex;
+        position: relative;
+        padding: 0;
+        background-color: transparent;
+        a {
+            width: auto;
+        }
+    }
+    .contenido_principal {
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: 1fr;
+    }
+    .contenido_secundario {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        .cuadro {
+            max-width: 24rem;
+        }
+    }
+    .svg {
+        width: 40rem;
+        margin: 0 auto;
+    }
+}
+@media (min-width:550px) and (max-width:800px) {
+    .contenido_principal {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    .informacion-principal {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        gap: 2rem;
+        align-items: center;
+    }
+}
+
 .informacion-principal_texto {
     min-height: 30rem;
     h2 {
@@ -106,28 +194,6 @@ a {
     }
 }
 
-.contenido_secundario {
-    margin-top: 5rem;
-    margin-bottom: 3rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    .cuadro {
-        padding: 1rem;
-        border: 1px solid rgba(227, 227, 227, 0.25);
-        min-width: 20rem;
-        h3 {
-            font-size: 1.4rem;
-            color: rgba(227, 227, 227, 0.8);
-        }
-        h2 {
-            font-size: 3rem;
-            margin: 1.5rem 0;
-            font-weight: normal;
-        }
-    }
-}
-
 .lista_informacion {
     list-style: none;
     padding-left: 0;
@@ -148,6 +214,34 @@ a {
         background-color: #5C00AE;
         &:hover {
             background-color: #5C00AE;
+        }
+    }
+}
+.fijo {
+    position: fixed;
+    top: 0%;
+}
+.navegacion_info {
+    display: none;
+}
+@media (max-width: 550px ) {
+    .navegacion_info {
+        // display: flex;
+        width: 100%;
+        position: fixed;
+        border-bottom: 1px solid rgba($color: #EDEBEB, $alpha: 0.4);
+        .boton {
+            background-color: transparent;
+            color: #EDEBEB;
+            border: none;
+            // margin: 0 1rem;
+            width: 33%;
+            height: 5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: -0.5%;
+            outline: none;
+            
         }
     }
 }
